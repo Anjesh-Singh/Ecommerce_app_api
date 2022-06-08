@@ -44,7 +44,11 @@ app.listen(configs.PORT, async () => {
     
     // console.log(getproducts);
 
-    // await db.sequelize.sync({ force: true });
+    if(process.env.SYNC){
+        await db.sequelize.sync({ force: true });
+    }
+
+    
     // await User.sync({ alter: true });
     // const user = await User.create({
     //     email: 'c@d.com',
