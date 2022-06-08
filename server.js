@@ -6,10 +6,11 @@ const productRoutes = require('./routes/product.routes');
 const authRoutes = require('./routes/auth.routes');
 const cartRoutes = require('./routes/cart.routes');
 const app = express();
-const db = require('./models/index')
+
 
 const Product = require('./models/index').Product;
 const Categories = require('./models/index').Categories;
+const db = require('./models/index')
 
 /*
     We need to add a middleware that will help
@@ -79,5 +80,3 @@ app.listen(configs.PORT, async () => {
     //   });
     //   console.log(user);
 });
-
-//checking
