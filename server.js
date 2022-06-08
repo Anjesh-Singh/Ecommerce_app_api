@@ -6,6 +6,7 @@ const productRoutes = require('./routes/product.routes');
 const authRoutes = require('./routes/auth.routes');
 const cartRoutes = require('./routes/cart.routes');
 const app = express();
+const db = require('./models/index')
 
 const Product = require('./models/index').Product;
 const Categories = require('./models/index').Categories;
